@@ -1,22 +1,16 @@
-// Get the container
-const designGrid = document.getElementById('designGrid');
+// Auto-populate design gallery
+const gallery = document.getElementById('design-gallery');
 
-// List of all images you uploaded
-// You can add more here, just by keeping the correct folder path
-const images = [
-  "images/img1.jpg",
-  "images/img2.jpg",
-  "images/img3.jpg",
-  "images/img4.jpg",
-  "images/img5.jpg",
-  "images/img6.jpg"
+// List of images in the images folder (update filenames as needed)
+const designImages = [
+  'green-plaza.jpg',
+  'market-plaza.jpg',
+  'safety-plaza.jpg'
 ];
 
-// Automatically create image elements
-images.forEach(src => {
+designImages.forEach(imgName => {
   const img = document.createElement('img');
-  img.src = src;
-  img.alt = "Design image";
-  img.classList.add('grid-image'); // optional CSS class
-  designGrid.appendChild(img);
+  img.src = `images/${imgName}`;
+  img.alt = imgName;
+  gallery.appendChild(img);
 });
