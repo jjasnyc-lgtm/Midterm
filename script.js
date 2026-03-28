@@ -1,24 +1,22 @@
-// FADE IN
-const sections = document.querySelectorAll("section");
+// Get the container
+const designGrid = document.getElementById('designGrid');
 
-window.addEventListener("scroll", () => {
-  sections.forEach(sec => {
-    const top = sec.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      sec.classList.add("visible");
-    }
-  });
+// List of all images you uploaded
+// You can add more here, just by keeping the correct folder path
+const images = [
+  "images/img1.jpg",
+  "images/img2.jpg",
+  "images/img3.jpg",
+  "images/img4.jpg",
+  "images/img5.jpg",
+  "images/img6.jpg"
+];
+
+// Automatically create image elements
+images.forEach(src => {
+  const img = document.createElement('img');
+  img.src = src;
+  img.alt = "Design image";
+  img.classList.add('grid-image'); // optional CSS class
+  designGrid.appendChild(img);
 });
-
-// trigger on load
-window.dispatchEvent(new Event("scroll"));
-
-// SLIDER
-const slider = document.getElementById("sliderRange");
-const overlay = document.querySelector(".overlay");
-
-if (slider) {
-  slider.addEventListener("input", () => {
-    overlay.style.width = slider.value + "%";
-  });
-}
