@@ -1,80 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harlem Plaza Redesign</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #1f1f1f;
-      color: #fff;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harlem Plaza Redesign</title>
 
-    header {
-      height: 100vh;
-      background: url('hero.jpg') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.7);
-      padding: 10px;
-      text-align: center;
-    }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  background: #121212;
+  color: #eee;
+}
 
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
+  height: 100vh;
+  position: fixed;
+  padding: 30px 20px;
+  text-align: center;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+.sidebar img {
+  width: 110px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
 
-    .alt {
-      background: #2a2a2a;
-    }
+.sidebar h2 { margin-bottom: 20px; }
 
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
+.sidebar a {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  margin: 12px 0;
+  transition: 0.3s;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.sidebar a:hover { color: #f4a261; }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-    }
-  </style>
+/* CONTENT */
+.content {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+}
+
+section {
+  padding: 80px 60px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1, h2, h3 { font-weight: 600; }
+
+.hero {
+  height: 100vh;
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* BEFORE AFTER SLIDER */
+.slider {
+  position: relative;
+  max-width: 600px;
+}
+
+.slider img { display: block; }
+
+.slider .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.slider input {
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px) {
+  body { flex-direction: column; }
+  .sidebar { position: relative; width: 100%; height: auto; }
+  .content { margin: 0; width: 100%; }
+}
+
+</style>
 </head>
+
 <body>
 
-<nav>
+<div class="sidebar">
+  <img src="profile.jpg">
+  <h2>Plaza Redesign</h2>
   <a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#problem">Problem</a>
@@ -82,59 +147,87 @@
   <a href="#design">Design</a>
   <a href="#final">Final</a>
   <a href="#reflection">Reflection</a>
-</nav>
+</div>
 
-<header id="home">
+<div class="content">
+
+<section id="home" class="hero">
   <h1>Harlem Plaza Redesign</h1>
-  <p>A Safer, Greener Community Space</p>
-</header>
+</section>
 
 <section id="about">
   <h2>About the Project</h2>
-  <p>This project explores how Montefiore Square can be redesigned into a safer and more welcoming public space. The goal is to improve pedestrian experience, increase greenery, and create a strong sense of community.</p>
+  <p>This project redesigns Montefiore Square into a safer, greener, and community-focused urban plaza.</p>
 </section>
 
-<section id="problem" class="alt">
+<section id="problem">
   <h2>The Problem</h2>
-  <p>The current plaza lacks seating, greenery, and safe pedestrian crossings. It is underused and does not serve the needs of the surrounding community.</p>
+  <p>The plaza lacks safety, seating, greenery, and meaningful public use, making it underutilized.</p>
 </section>
 
 <section id="site">
   <h2>Site Context</h2>
-  <p>The plaza is located in a busy urban environment with heavy traffic flow. Pedestrian movement is not prioritized, and accessibility is limited.</p>
-  <img src="site.jpg" alt="Site Image">
+  <img src="site.jpg">
 </section>
 
-<section id="design" class="alt">
+<section id="design">
   <h2>Design Options</h2>
   <div class="grid">
-    <div>
-      <h3>Option 1: Green Plaza</h3>
+    <div class="card">
+      <h3>Green Plaza</h3>
       <img src="design1.jpg">
-      <p>Focus on trees, shade, and relaxation.</p>
+      <p>Focus on nature and relaxation.</p>
     </div>
-    <div>
-      <h3>Option 2: Market Plaza</h3>
+    <div class="card">
+      <h3>Market Plaza</h3>
       <img src="design2.jpg">
-      <p>Includes vendor kiosks and activity spaces.</p>
+      <p>Focus on activity and vendors.</p>
     </div>
   </div>
 </section>
 
 <section id="final">
   <h2>Final Proposal</h2>
-  <p>The final design combines greenery with flexible community space, improving safety and usability.</p>
-  <img src="final.jpg">
+
+  <div class="slider">
+    <img src="after.jpg">
+    <div class="overlay">
+      <img src="before.jpg">
+    </div>
+    <input type="range" min="0" max="100" value="50" id="sliderRange">
+  </div>
+
+  <p>The final design merges greenery with community programming.</p>
 </section>
 
-<section id="reflection" class="alt">
+<section id="reflection">
   <h2>Reflection</h2>
-  <p>AI tools helped generate design ideas and visualize possibilities. However, human decision-making was essential in selecting and refining the final proposal.</p>
+  <p>AI helped visualize ideas, while human decisions refined the final design.</p>
 </section>
 
-<footer>
-  <p>Midterm Project | Urban Design</p>
-</footer>
+</div>
+
+<script>
+// FADE IN
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("visible");
+    }
+  });
+});
+
+// SLIDER
+const slider = document.getElementById("sliderRange");
+const overlay = document.querySelector(".overlay");
+
+slider.addEventListener("input", () => {
+  overlay.style.width = slider.value + "%";
+});
+</script>
 
 </body>
 </html>
