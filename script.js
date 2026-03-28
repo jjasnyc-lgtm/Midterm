@@ -1,12 +1,11 @@
-// Array of Before & After pairs
+// Array of Before & After pairs (update filenames as needed)
 const beforeAfterPairs = [
   { prompt: "Green Plaza", before: "before-green.jpg", after: "after-green.jpg" },
   { prompt: "Market Plaza", before: "before-market.jpg", after: "after-market.jpg" },
-  { prompt: "Safety Plaza", before: "before-safety.jpg", after: "after-safety.jpg" },
-  // Add new prompts here with their filenames
+  { prompt: "Safety Plaza", before: "before-safety.jpg", after: "after-safety.jpg" }
 ];
 
-// Populate Before & After sections dynamically
+// Dynamically generate Before & After sections
 const beforeAfterContainer = document.getElementById("before-after");
 
 beforeAfterPairs.forEach(pair => {
@@ -30,9 +29,9 @@ beforeAfterPairs.forEach(pair => {
   beforeAfterContainer.appendChild(section);
 });
 
-// Auto-populate other design images gallery
+// Other design images gallery
 const gallery = document.getElementById('design-gallery');
-const designImages = ["green-plaza.jpg","market-plaza.jpg","safety-plaza.jpg"]; // Add any extra images
+const designImages = ["green-plaza.jpg","market-plaza.jpg","safety-plaza.jpg"]; 
 designImages.forEach(imgName => {
   const img = document.createElement('img');
   img.src = `images/${imgName}`;
