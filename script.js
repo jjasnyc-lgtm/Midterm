@@ -1,4 +1,4 @@
-// Auto-populate design gallery
+// Auto-populate Other Designs Gallery
 const gallery = document.getElementById('design-gallery');
 
 // List of images in the images folder (update filenames as needed)
