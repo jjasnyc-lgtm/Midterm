@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harlem Plaza Redesign</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1f1f1f;
+      color: #fff;
+    }
+
+    header {
+      height: 100vh;
+      background: url('hero.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .alt {
+      background: #2a2a2a;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#problem">Problem</a>
+  <a href="#site">Site</a>
+  <a href="#design">Design</a>
+  <a href="#final">Final</a>
+  <a href="#reflection">Reflection</a>
+</nav>
+
+<header id="home">
+  <h1>Harlem Plaza Redesign</h1>
+  <p>A Safer, Greener Community Space</p>
+</header>
+
+<section id="about">
+  <h2>About the Project</h2>
+  <p>This project explores how Montefiore Square can be redesigned into a safer and more welcoming public space. The goal is to improve pedestrian experience, increase greenery, and create a strong sense of community.</p>
+</section>
+
+<section id="problem" class="alt">
+  <h2>The Problem</h2>
+  <p>The current plaza lacks seating, greenery, and safe pedestrian crossings. It is underused and does not serve the needs of the surrounding community.</p>
+</section>
+
+<section id="site">
+  <h2>Site Context</h2>
+  <p>The plaza is located in a busy urban environment with heavy traffic flow. Pedestrian movement is not prioritized, and accessibility is limited.</p>
+  <img src="site.jpg" alt="Site Image">
+</section>
+
+<section id="design" class="alt">
+  <h2>Design Options</h2>
+  <div class="grid">
+    <div>
+      <h3>Option 1: Green Plaza</h3>
+      <img src="design1.jpg">
+      <p>Focus on trees, shade, and relaxation.</p>
+    </div>
+    <div>
+      <h3>Option 2: Market Plaza</h3>
+      <img src="design2.jpg">
+      <p>Includes vendor kiosks and activity spaces.</p>
+    </div>
+  </div>
+</section>
+
+<section id="final">
+  <h2>Final Proposal</h2>
+  <p>The final design combines greenery with flexible community space, improving safety and usability.</p>
+  <img src="final.jpg">
+</section>
+
+<section id="reflection" class="alt">
+  <h2>Reflection</h2>
+  <p>AI tools helped generate design ideas and visualize possibilities. However, human decision-making was essential in selecting and refining the final proposal.</p>
+</section>
+
+<footer>
+  <p>Midterm Project | Urban Design</p>
+</footer>
+
+</body>
+</html>
