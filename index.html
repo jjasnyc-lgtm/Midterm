@@ -7,55 +7,67 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header>
-    <nav>
+
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <nav class="nav-bar">
       <ul>
         <li><a href="#landing">Home</a></li>
         <li><a href="#before-after">Before & After</a></li>
-        <li><a href="#other-designs">Other Designs</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#reflection">Reflection</a></li>
       </ul>
     </nav>
-    <h1>Harlem Plaza Redesign</h1>
+    <h1 class="site-title">Harlem Plaza Redesign</h1>
   </header>
 
-  <main>
-    <div class="container">
-      <!-- Left Column: Nature Background -->
-      <div class="left-column">
-        <div class="nature-overlay">
-          <h2>Project Context</h2>
-          <p>This column provides context about Harlem Plaza, including site analysis, challenges, and community needs.</p>
-        </div>
+  <!-- Main Content -->
+  <main class="site-main">
+
+    <section id="landing" class="landing-section">
+      <div class="landing-content">
+        <h2>Redesign Proposal</h2>
+        <p>Welcome to my midterm project on redesigning Harlem Plaza — featuring research, design thinking, and AI‑generated imagery.</p>
       </div>
+    </section>
 
-      <!-- Right Column: Main Content -->
-      <div class="right-column">
-        <section id="landing">
-          <h2>Welcome</h2>
-          <p>This website showcases my midterm project redesign of Harlem Plaza, including AI-assisted visuals and final proposals.</p>
-        </section>
+    <div class="content-wrapper">
+      <!-- Left Sidebar (Nature Background) -->
+      <aside class="left-sidebar">
+        <div class="sidebar-text">
+          <h2>Project Context</h2>
+          <p>Harlem Plaza needs a community‑focused redesign that addresses safety, comfort, movement, and inclusion.</p>
+        </div>
+      </aside>
 
+      <!-- Right Main Column -->
+      <section class="main-content">
+
+        <!-- Before & After Section -->
         <section id="before-after">
           <h2>Before & After</h2>
-          <!-- JS will dynamically insert Before & After sections here -->
+          <!-- JS will insert these dynamically -->
         </section>
 
-        <section id="other-designs">
-          <h2>Other Design Concepts</h2>
+        <!-- Other Designs Gallery -->
+        <section id="gallery">
+          <h2>AI Design Gallery</h2>
           <div id="design-gallery"></div>
         </section>
 
+        <!-- Reflection -->
         <section id="reflection">
           <h2>Reflection</h2>
-          <p>This section explains design decisions, the role of AI-generated images, and how the proposal addresses safety, comfort, and community goals.</p>
+          <p>This section explains my design approach, the role of AI images, and how this redesign serves the community.</p>
         </section>
-      </div>
+
+      </section>
     </div>
+
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="site-footer">
     <p>&copy; 2026 Harlem Plaza Midterm Project</p>
   </footer>
 
