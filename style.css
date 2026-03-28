@@ -1,144 +1,56 @@
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', sans-serif; line-height:1.6; background:#fafafa; color:#333; }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #fafafa;
-  color: #333;
-}
+/* Header */
+.site-header { background:#2b2a29; color:#fff; text-align:center; padding:15px 0; }
+.nav-bar ul { list-style:none; display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+.nav-bar a { color:#fff; text-decoration:none; font-weight:600; }
+.site-title { margin-top:10px; font-size:2rem; }
 
-/* Header + Navigation */
-.site-header {
-  background: #2b2a29;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-}
+/* Landing */
+.landing-section { padding:60px 20px; background:#cfe2f3; text-align:center; }
 
-.nav-bar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
+/* Main Layout */
+.content-wrapper { display:flex; min-height:80vh; }
 
-.nav-bar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
+/* Left Sidebar */
+.left-sidebar { flex:1; background:url('images/nature-bg.jpg') center/cover no-repeat; padding:25px; }
+.sidebar-content { background:rgba(0,0,0,0.4); color:#fff; padding:15px; border-radius:8px; height:100%; }
 
-.site-title {
-  margin-top: 10px;
-  font-size: 2rem;
-}
+/* Right Content */
+.right-content { flex:2; padding:25px; }
 
-/* Landing Section */
-.landing-section {
-  padding: 60px 20px;
-  background: #d3d3d1;
-  text-align: center;
-}
+/* Colored Sections */
+.colored-section { padding:25px; border-radius:8px; margin-bottom:25px; }
+.color-lightblue { background:#cfe2f3; }
+.color-lightgreen { background:#d9ead3; }
+.color-lightyellow { background:#fff2cc; }
+.color-lightorange { background:#fce5cd; }
+.color-lightpink { background:#f4cccc; }
+.color-lightpurple { background:#d9d2e9; }
+.color-lightcyan { background:#d0e0e3; }
+.color-lightgray { background:#eeeeee; }
 
-.landing-content h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
+/* Section Headers */
+h2 { margin-bottom:15px; color:#444; }
+h3 { margin-bottom:10px; color:#555; }
 
-/* Layout */
-.content-wrapper {
-  display: flex;
-  min-height: 60vh;
-}
-
-/* Left Sidebar Style */
-.left-sidebar {
-  flex: 1;
-  background: url('images/nature-bg.jpg') center/cover no-repeat;
-  padding: 25px;
-}
-
-.sidebar-text {
-  background: rgba(0, 0, 0, 0.4);
-  color: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-/* Main Content */
-.main-content {
-  flex: 2;
-  padding: 25px;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-h2 {
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-  color: #444;
-}
-
-h3 {
-  margin-bottom: 10px;
-  font-size: 1.4rem;
-  color: #555;
-}
-
-/* Before & After Photos */
-.before-after-section {
-  margin-bottom: 25px;
-}
-
-.photos {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.photos img {
-  width: 100%;
-  max-width: 380px;
-  border-radius: 8px;
-  border: 3px solid #444;
-}
+/* Before & After */
+.before-after-section { margin-bottom:25px; }
+.photos { display:flex; gap:15px; flex-wrap:wrap; }
+.photos img { width:100%; max-width:380px; border-radius:8px; border:2px solid #444; }
 
 /* Gallery */
-#design-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-#design-gallery img {
-  width: 100%;
-  max-width: 280px;
-  border-radius: 8px;
-  border: 2px solid #444;
-}
+#design-gallery { display:flex; flex-wrap:wrap; gap:15px; }
+#design-gallery img { width:100%; max-width:300px; border-radius:8px; border:2px solid #444; }
 
 /* Footer */
-.site-footer {
-  background: #2b2a29;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 25px;
-}
+.site-footer { background:#2b2a29; color:#fff; text-align:center; padding:15px 0; margin-top:25px; }
 
-/* Responsiveness */
-@media (max-width: 950px) {
-  .content-wrapper {
-    flex-direction: column;
-  }
-  .photos {
-    flex-direction: column;
-  }
+/* Responsive */
+@media(max-width:950px){
+  .content-wrapper{ flex-direction:column; }
+  .photos{ flex-direction:column; }
+  .nav-bar ul{ flex-direction:column; gap:10px; }
 }
