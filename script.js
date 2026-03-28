@@ -7,10 +7,10 @@ const beforeAfterPairs = [
 
 // Insert Before & After sections
 const container = document.getElementById("before-after");
-beforeAfterPairs.forEach(pair=>{
+beforeAfterPairs.forEach(pair => {
   const section = document.createElement("div");
-  section.className="before-after-section";
-  section.innerHTML=`
+  section.className = "before-after-section";
+  section.innerHTML = `
     <h3>${pair.prompt}</h3>
     <div class="photos">
       <div class="before-photo">
@@ -26,16 +26,16 @@ beforeAfterPairs.forEach(pair=>{
   container.appendChild(section);
 });
 
-// Populate gallery with your images
+// Populate gallery with your images (explicitly including before-green.jpg & before-market.jpg)
 const gallery = document.getElementById("design-gallery");
 const galleryImages = [
-  "before-green.jpg","after-green.jpg",
-  "before-market.jpg","after-market.jpg",
-  "before-safety.jpg","after-safety.jpg"
+  "before-green.jpg", "after-green.jpg",
+  "before-market.jpg", "after-market.jpg",
+  "before-safety.jpg", "after-safety.jpg"
 ];
-galleryImages.forEach(img=>{
+galleryImages.forEach(img => {
   const i = document.createElement("img");
-  i.src=`images/${img}`;
-  i.alt=img;
+  i.src = `images/${img}`;
+  i.alt = img;
   gallery.appendChild(i);
 });
