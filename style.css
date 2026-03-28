@@ -1,4 +1,4 @@
-/* Reset & Global */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,128 +7,138 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f1e9;
+  line-height: 1.6;
+  background: #fafafa;
   color: #333;
-  line-height: 1.5;
 }
 
-header {
-  background-color: #8d6e63;
+/* Header + Navigation */
+.site-header {
+  background: #2b2a29;
   color: #fff;
   text-align: center;
-  padding: 15px 10px;
+  padding: 15px 0;
 }
 
-nav ul {
+.nav-bar ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 5px;
+  gap: 25px;
 }
 
-nav a {
+.nav-bar a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-/* Container Layout */
-.container {
+.site-title {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+/* Landing Section */
+.landing-section {
+  padding: 60px 20px;
+  background: #d3d3d1;
+  text-align: center;
+}
+
+.landing-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Layout */
+.content-wrapper {
   display: flex;
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
-/* Left Column */
-.left-column {
+/* Left Sidebar Style */
+.left-sidebar {
   flex: 1;
-  background: url('images/nature-bg.jpg') no-repeat center center/cover;
-  padding: 15px;
+  background: url('images/nature-bg.jpg') center/cover no-repeat;
+  padding: 25px;
 }
 
-.left-column .nature-overlay {
-  background-color: rgba(0,0,0,0.35);
+.sidebar-text {
+  background: rgba(0, 0, 0, 0.4);
+  color: #f9f9f9;
   padding: 15px;
   border-radius: 8px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #fff;
 }
 
-/* Right Column */
-.right-column {
+/* Main Content */
+.main-content {
   flex: 2;
-  padding: 20px;
+  padding: 25px;
 }
 
-/* Sections */
 section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 h2 {
-  margin-bottom: 10px;
-  color: #5a4033;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #444;
 }
 
 h3 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #555;
 }
 
-/* Before & After */
+/* Before & After Photos */
 .before-after-section {
   margin-bottom: 25px;
 }
 
-.before-after-section .photos {
+.photos {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
-.before-photo, .after-photo {
-  flex: 1;
-  text-align: center;
-}
-
-.before-photo img, .after-photo img {
+.photos img {
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   border-radius: 8px;
-  border: 2px solid #8d6e63;
+  border: 3px solid #444;
 }
 
 /* Gallery */
 #design-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 
 #design-gallery img {
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   border-radius: 8px;
-  border: 2px solid #8d6e63;
+  border: 2px solid #444;
 }
 
 /* Footer */
-footer {
-  text-align: center;
-  background-color: #8d6e63;
+.site-footer {
+  background: #2b2a29;
   color: #fff;
-  padding: 10px 0;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 25px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .container {
+/* Responsiveness */
+@media (max-width: 950px) {
+  .content-wrapper {
     flex-direction: column;
   }
-
-  .before-after-section .photos {
+  .photos {
     flex-direction: column;
   }
 }
